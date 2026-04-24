@@ -49,6 +49,6 @@ jobs:
           # Restart application
           ssh -i /tmp/deploy_key -o StrictHostKeyChecking=no \
             "$DEPLOY_USER@$DEPLOY_HOST" \
-            "cd $DEPLOY_PATH && npm ci --omit=dev && pm2 restart mtwapa || pm2 start npm --name mtwapa -- start"
+            "cd $DEPLOY_PATH && npm ci --omit=dev && pm2 restart mtwapabay || pm2 start npm --name mtwapabay -- start"
 
           rm -f /tmp/deploy_key

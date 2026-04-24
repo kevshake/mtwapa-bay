@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Run once on a fresh Ubuntu 22.04 server to set up the Mtwapa Bay production environment.
 # Usage: bash server-setup.sh <domain> <deploy_user>
-# Example: bash server-setup.sh mtwapa.com mtwapa
+# Example: bash server-setup.sh mtwapabay.com mtwapa
 set -euo pipefail
 
 DOMAIN="${1:?Usage: $0 <domain> <deploy_user>}"

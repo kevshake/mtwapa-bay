@@ -15,6 +15,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Mtwapa Bay — Luxury Property Management",
   description: "Africa's premier luxury property management platform.",
+  metadataBase: new URL("https://mtwapabay.com"),
 };
 
 export default function RootLayout({

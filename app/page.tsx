@@ -14,7 +14,7 @@ export default function Home() {
         </p>
         <div className="pt-6">
           <a
-            href="mailto:hello@mtwapa.com"
+            href="mailto:hello@mtwapabay.com"
             className="inline-block border border-stone-700 text-stone-300 px-8 py-3 text-sm tracking-widest uppercase hover:border-stone-400 hover:text-stone-100 transition-colors duration-300"
           >
             Get in Touch
