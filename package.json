@@ -1,0 +1,10 @@
+{
+  "name": "paperclip-workspace",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "test": "node --test src/index.test.js",
+    "lint": "echo 'No lint configured'",
+    "sanity": "node scripts/sanity-test.js"
+  }
+}
