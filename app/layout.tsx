@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { metadata } from "@/lib/metadata";
+
+export { metadata };
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -11,12 +14,6 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
-
-export const metadata: Metadata = {
-  title: "Mtwapa Bay — Luxury Property Management",
-  description: "Africa's premier luxury property management platform.",
-  metadataBase: new URL("https://mtwapabay.com"),
-};
 
 export default function RootLayout({
   children,
