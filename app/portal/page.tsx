@@ -15,7 +15,7 @@ export default function PortalDashboard() {
     (r) => r.status === "open" || r.status === "in_progress"
   );
   const leaseEnd = new Date(currentLease.endDate);
-  const today = new Date("2026-04-24");
+  const today = new Date();
   const daysToExpiry = Math.ceil(
     (leaseEnd.getTime() - today.getTime()) / (1000 * 60 * 60 * 24)
   );
@@ -30,14 +30,14 @@ export default function PortalDashboard() {
         <h1 className="font-[family-name:var(--font-playfair)] text-3xl sm:text-4xl text-[#2C2416]">
           Good morning, James
         </h1>
-        <p className="text-[#2C2416]/50 text-sm mt-1">
-          {new Date("2026-04-24").toLocaleDateString("en-GB", {
-            weekday: "long",
-            day: "numeric",
-            month: "long",
-            year: "numeric",
-          })}
-        </p>
+          <p className="text-[#2C2416]/50 text-sm mt-1">
+            {today.toLocaleDateString("en-GB", {
+              weekday: "long",
+              day: "numeric",
+              month: "long",
+              year: "numeric",
+            })}
+          </p>
       </div>
 
       {/* Property hero card */}

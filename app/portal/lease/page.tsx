@@ -33,7 +33,7 @@ export default function LeasePage() {
     (leaseEnd.getMonth() - leaseStart.getMonth());
   const totalValue = currentLease.monthlyRent * totalMonths;
 
-  const today = new Date("2026-04-24");
+  const today = new Date();
   const elapsed =
     (today.getTime() - leaseStart.getTime()) /
     (leaseEnd.getTime() - leaseStart.getTime());

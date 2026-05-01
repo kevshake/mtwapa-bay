@@ -31,6 +31,16 @@ function groupByType(docs: TenantDocument[]) {
 export default function DocumentsPage() {
   const groups = groupByType(documents);
 
+  const lastUpdated = [...documents]
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())[0]?.date ?? "";
+
+  const totalSizeMB = documents
+    .reduce((sum, doc) => {
+      const num = parseFloat(doc.size.replace(/[^0-9.]/g, ""));
+      return sum + (isNaN(num) ? 0 : num);
+    }, 0)
+    .toFixed(1);
+
   return (
     <div className="px-6 sm:px-10 py-10 max-w-3xl">
       <div className="mb-10">
@@ -46,8 +56,8 @@ export default function DocumentsPage() {
       <div className="grid grid-cols-3 gap-px bg-[#E8DFD0] mb-10">
         {[
           ["Total Files", String(documents.length)],
-          ["Last Updated", "1 Apr 2026"],
-          ["Storage", "11.4 MB"],
+          ["Last Updated", formatDate(lastUpdated)],
+          ["Storage", `${totalSizeMB} MB`],
         ].map(([label, value]) => (
           <div key={label} className="bg-[#F4F0E8] px-5 py-4">
             <p className="text-[9px] tracking-[0.2em] uppercase text-[#8A9BAA] mb-1">

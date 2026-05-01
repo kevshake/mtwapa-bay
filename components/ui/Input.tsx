@@ -17,7 +17,8 @@ export default function Input({ className = "", ...rest }: Props) {
   const cls = `ds-input ${className}`.trim();
 
   if (isTextarea(rest)) {
-    const { multiline: _m, ...textareaRest } = rest;
+    const { multiline, ...textareaRest } = rest;
+    void multiline;
     return <textarea className={cls} {...textareaRest} />;
   }
 
