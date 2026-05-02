@@ -18,3 +18,5 @@ Title: QA Blockers Tracker
 
 ## Resolved
 - Workspace 69322aad: CI fixed and verified (Node 18 → 20/22)
+- HOK-136: Smoke test harness delivered — committed BACKEND/smoke-test.sh (6 scenarios)
+- HOK-75: QA Test Plan written (code review of aml-txn-service + aml-rules-service)
