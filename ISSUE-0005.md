@@ -1,11 +1,20 @@
 Title: QA Blockers Tracker
 
 - Status: open
-- Description: Track blockers surfaced by QA on ISSUE-0001. Create focused sub-tasks as needed.
-- Tasks:
-- 1) Capture blocker details (description, impact, priority).
-- 2) Assign owner and due date per blocker.
-- 3) Link blockers to ISSUE-0001 or CI work (ISSUE-0004) as appropriate.
-- 4) Reconcile blockers once resolved; resume downstream work.
+- Description: Track blockers surfaced by QA.
 
-- Next action: QA surfaces blockers; create sub-tasks for each blocker.
+## Active Blockers
+1. **Boss sign-off on CI workflow** (ISSUE-0006)
+   - Owner: Boss | Priority: High
+   - CI implemented and verified (all 3 Node versions green)
+   - Waiting for approval to merge to master
+   - Interaction: INTERACTION-0002.md (request_confirmation)
+
+2. **Workspace 69322aad remote setup** (related)
+   - Owner: Developer | Priority: Medium
+   - 40 tests pass locally, CI correct, but not pushed to remote
+   - Remote points to kevshake/mtwapa-bay (same as 01d4c0bc) but local diverged
+   - Needs own branch or separate repo
+
+## Resolved
+- None yet
