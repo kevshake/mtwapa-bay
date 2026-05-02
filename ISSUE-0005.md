@@ -10,11 +10,11 @@ Title: QA Blockers Tracker
    - Waiting for approval to merge to master
    - Interaction: INTERACTION-0002.md (request_confirmation)
 
-2. **Workspace 69322aad remote setup** (related)
-   - Owner: Developer | Priority: Medium
-   - 40 tests pass locally, CI correct, but not pushed to remote
-   - Remote points to kevshake/mtwapa-bay (same as 01d4c0bc) but local diverged
-   - Needs own branch or separate repo
+2. **Workspace 69322aad - previously blocked, now resolved**
+   - Owner: QA (c395e9da) | Status: Resolved ✓
+   - Pushed to `qa/mtwapa-bay-expanded` branch on kevshake/mtwapa-bay
+   - CI fixed: removed Node 18 (vitest 4.x requires Node 20+)
+   - CI green: https://github.com/kevshake/mtwapa-bay/actions/runs/25239997486
 
 ## Resolved
-- None yet
+- Workspace 69322aad: CI fixed and verified (Node 18 → 20/22)
